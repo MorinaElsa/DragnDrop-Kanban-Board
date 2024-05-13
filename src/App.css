@@ -1,0 +1,123 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  color: white;
+}
+
+.drag-n-drop {
+  padding: 5px;
+  display: flex;
+  gap: 0.8rem;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+  margin-bottom: 50px;
+}
+.dnd-group {
+  background-color: #49505e;
+  border-radius: 10px;
+  width: 22%;
+  height: 590px;
+  overflow-y: auto;
+  position: relative;
+  padding-bottom: 20px;
+}
+
+.dnd-group::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+.dnd-item {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100px;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: white;
+  border-radius: 10px;
+  color: #282c34;
+  font-weight: bold;
+  font-size: 20px;
+}
+.dnd-item:hover {
+  cursor: grab;
+}
+
+.dnd-item:active {
+  cursor: grabbing;
+}
+
+.dnd-item:not(:last-of-type) {
+  margin-bottom: 0.5rem;
+}
+.dnd-item * {
+  margin: 0;
+  font-size: 1rem;
+}
+.group-title {
+  border-radius: 10px 10px 0 0;
+  padding: 0.8rem;
+  padding-top: 25px;
+  height: 40px;
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  margin-bottom: 10px;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  width: 95%;
+}
+.current {
+  background-color: #282c34;
+
+}
+
+.dragging {
+  transform: scale(1.05);
+  transition: transform 0.2s ease;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+#btn {
+  margin-top: 20px;
+  padding: 10px 12px;
+  background-color: #282c34;
+  color: white;
+  border-radius: 20px;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
